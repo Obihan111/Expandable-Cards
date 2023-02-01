@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Island+Moments&family=Pacifico&family=Roboto:wght@300;400;700&display=swap");
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Roboto', sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100vw;
+    height:100vh;
+    overflow: hidden;
+}
+
+.container{
+    width:90vw;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+  
+}
+
+.image-1{
+    background-image:url(https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Zm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60);
+
+}
+
+.image-2{
+    background-image:url(https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60);
+
+}
+.image-3{
+    background-image:url(https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60);
+
+}
+
+.image-4{
+    background-image:url(https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60);
+
+}
+
+.image-5{
+    background-image:url(https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Zm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60);
+
+}
+
+.image-6{
+    background-image:url(https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60);
+}
+
+.panel{
+    margin:10px;
+    flex:0.5; /*to reduce the size*/
+    background-size:auto 100%;
+    background-position: center;
+    background-repeat:no-repeat;
+    height:80vh;
+    position:relative; /*so we can set the h3 inside the panel to absolute*/
+    transition:flex 3s ease-in-out;
+    border-radius:2em;
+    color:#fff;
+}
+.panel h3{
+    position:absolute;
+    bottom:20px;
+    left:20px;
+    opacity:0; /* to hide the h3 and open it only when it is active*/
+    margin:0;
+    font-size:24px;
+}
+
+.panel.active{
+    flex:10;
+}
+
+.panel.active h3{
+    opacity:1;
+}
+
+/* To reduce the sizes of the images at small screens, we apply media queries to ensure thaty only three images show at small sizes*/
+
+@media (max-width:768px) {
+    .container{
+        width:90vw;
+    }
+
+    .panel:nth-of-type(5), .panel:nth-of-type(6){
+        display:none;
+    }
+}
